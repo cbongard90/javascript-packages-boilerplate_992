@@ -19,13 +19,17 @@
       </form>
       <ul id="results" class="list-group list-group-horizontal"></ul>
       <div class="row">
-        <div class="col pt-1">
+        <div class="col pt-1" data-controller="disable-button">
           <button
             class="btn btn-primary btn-lg"
-            data-controller="disable-button"
-            data-action="click->disable-button#disable">
+            data-action="click->disable-button#disable"
+            data-disable-button-target="button"
+            >
             Click me!
           </button>
+          <a href="#" class="d-none ms-2"
+          data-disable-button-target="link"
+          >Reset</a>
         </div>
       </div>
     </div>
