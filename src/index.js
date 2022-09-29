@@ -6,32 +6,35 @@ window.Stimulus = Application.start()
 const context = require.context("./controllers", true, /\.js$/)
 Stimulus.load(definitionsFromContext(context))
 
-const list = document.querySelector("#results")
 initSortable();
 
-const insertMovies = (data) => {
-  data.Search.forEach((result) => {
-    const movieTag = `<li class="list-group-item border-0">
-      <img src="${result.Poster}" alt="" width="100">
-    </li>`
-    list.insertAdjacentHTML("beforeend", movieTag)
-  })
-}
+// const list = document.querySelector("#results")
+// Transferred in movies_controller
+// const insertMovies = (data) => {
+//   data.Search.forEach((result) => {
+//     const movieTag = `<li class="list-group-item border-0">
+//       <img src="${result.Poster}" alt="" width="100">
+//     </li>`
+//     list.insertAdjacentHTML("beforeend", movieTag)
+//   })
+// }
 
-const fetchMovies = (query) => {
-  // fetch(`http://www.omdbapi.com/?s=${query}&apikey=483c29c9`)
-  fetch(`./data.json`)
-    .then(response => response.json())
-    .then(data => insertMovies(data))
-}
+// Transferred in movies_controller
+// const fetchMovies = (query) => {
+//   // fetch(`http://www.omdbapi.com/?s=${query}&apikey=483c29c9`)
+//   fetch(`./data.json`)
+//     .then(response => response.json())
+//     .then(data => insertMovies(data))
+// }
 
-fetchMovies("harry potter") // on 1st page load
-// fetchMovies("star wars")
+// Transferred in movies_controller
+// fetchMovies("harry potter") // on 1st page load
 
-const form = document.querySelector("#search-form")
-form.addEventListener("submit", (event) => {
-  event.preventDefault()
-  list.innerHTML = ""
-  const input = document.querySelector("#search-input")
-  fetchMovies(input.value)
-})
+// Transferred in movies_controller
+// const form = document.querySelector("#search-form")
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault()
+//   list.innerHTML = ""
+//   const input = document.querySelector("#search-input")
+//   fetchMovies(input.value)
+// })

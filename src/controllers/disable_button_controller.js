@@ -3,9 +3,10 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["button", "link"]
 
-  connect() {
-    console.log("Hello from our first Stimulus controller")
-  }
+  // can be removed once you know it is connected
+  // connect() {
+  //   console.log("Hello from our first Stimulus controller")
+  // }
 
   disable() {
     // this.element.innerText = "Bingo!"
