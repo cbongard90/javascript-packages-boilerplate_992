@@ -1,4 +1,7 @@
+import { initSortable } from "./plugins/init_sortable"
+
 const list = document.querySelector("#results")
+initSortable();
 
 const insertMovies = (data) => {
   data.Search.forEach((result) => {
@@ -10,12 +13,14 @@ const insertMovies = (data) => {
 }
 
 const fetchMovies = (query) => {
-  fetch(`http://www.omdbapi.com/?s=${query}&apikey=adf1f2d7`)
+  // fetch(`http://www.omdbapi.com/?s=${query}&apikey=483c29c9`)
+  fetch(`./data.json`)
     .then(response => response.json())
     .then(data => insertMovies(data))
 }
 
 fetchMovies("harry potter") // on 1st page load
+// fetchMovies("star wars")
 
 const form = document.querySelector("#search-form")
 form.addEventListener("submit", (event) => {
