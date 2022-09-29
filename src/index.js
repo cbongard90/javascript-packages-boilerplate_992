@@ -1,4 +1,4 @@
-import { initSortable } from "./plugins/init_sortable"
+// import { initSortable } from "./plugins/init_sortable"
 import { Application } from "@hotwired/stimulus"
 import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers"
 
@@ -6,7 +6,8 @@ window.Stimulus = Application.start()
 const context = require.context("./controllers", true, /\.js$/)
 Stimulus.load(definitionsFromContext(context))
 
-initSortable();
+// transferred in sortable_controller
+// initSortable();
 
 // const list = document.querySelector("#results")
 // Transferred in movies_controller
