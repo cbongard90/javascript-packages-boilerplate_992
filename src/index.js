@@ -22,7 +22,7 @@ Stimulus.load(definitionsFromContext(context))
 
 // Transferred in movies_controller
 // const fetchMovies = (query) => {
-//   // fetch(`http://www.omdbapi.com/?s=${query}&apikey=483c29c9`)
+//   // fetch(`http://www.omdbapi.com/?s=${query}&apikey=adf1f2d7`)
 //   fetch(`./data.json`)
 //     .then(response => response.json())
 //     .then(data => insertMovies(data))
