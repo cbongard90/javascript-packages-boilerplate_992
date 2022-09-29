@@ -19,6 +19,8 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "@hotwired/stimulus": "^3.1.0",
+    "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "sortablejs": "^1.15.0"
   }
 }
